@@ -7,6 +7,14 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <script>
+        var App = React.createClass({
+            render: function(){
+                return React.createElement("div", null,"Welcome to React World");
+            }
+        });
+
+        React.render(React.createElement(App), document.body);
+    </script>
 </body>
 </html>
