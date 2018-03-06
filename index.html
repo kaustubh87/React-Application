@@ -12,9 +12,23 @@
            
         var App = React.createClass({
             render: function(){
-                return <div>
-                    Hello, from React!
-                </div>;
+                return <table>
+                    <thead>
+                        <th>When</th>
+                        <th>Who</th>
+                        <th>Description</th>
+                    </thead>
+                    <tr>
+                        <td>2 minutes ago</td>
+                        <td>Jill Dupre</td>
+                        <td>Created new account</td>
+                    </tr>
+                    <tr>
+                        <td>1 hour ago</td>
+                        <td>Lose White</td>
+                        <td>Added first chapter</td>
+                    </tr>
+                </table>
             }
         });
 
