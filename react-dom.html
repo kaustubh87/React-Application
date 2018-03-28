@@ -26,13 +26,23 @@
                 return <h1>Hello {props.message}</h1>
             }
 
-            function ShoppingpApp(props){
+            function ShoppingTitle(props) {
+                return (
+                    <div>
+                       <h1>{props.title}</h1>
+                       <h2>Total Number of Items: {props.numItems} </h2>
+                    </div>       
+                )
+            }
+            
+
+            function ShoppingApp(props){
                 return {
                     <div>
                        <div>
                             <h1>My Shopping List</h1>
                             <h2>Total Number of Items: 9</h2>
-                            
+
                        </div>
                     </div>
                 }
