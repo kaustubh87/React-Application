@@ -12,7 +12,22 @@
 
         <script type="text/babel">
 
-            
+            function ShoppingTitle(props){
+                return (
+                    <div>
+                        <h1>{props.title}</h1>
+                        <h2>Total number of Items: {props.numItems}</h2>
+                    </div>
+                )
+            }
+
+            function ShoppingApp(props){
+                return (
+                   <div>
+                       <ShoppingTitle title="My Shopping List" numItems = "9" />
+                   </div>
+                )
+            }
          
 
            
