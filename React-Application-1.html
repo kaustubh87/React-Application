@@ -16,14 +16,16 @@
             function TransportationTitle(props) {
                 return(
                     <div>
-                        <h1>{props.title}</h1>
-                        <h1>{props.smalltitle}</h1>
+                        <h2>{props.title}</h2>
+                        <p>{props.subtitle}</p>
                     </div>
                 )
             }
 
             ReactDOM.render(
-                <TransportationTitle title='Transportation' smalltitle='Small heading'/>
+                <TransportationTitle title= 'Welcome to React Transportation' subtitle='The best place to buy vehicles online
+                '/>,
+                document.getElementById("root")
             )
 
         </script>
