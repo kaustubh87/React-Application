@@ -12,31 +12,37 @@
 
         <script type="text/babel">
 
-
-            function ChooseOptions(props){
+            function PageTitle(props) {
                 return(
                     <div>
-                        <p>{props.title}</p>
+                        <h2>{props.heading}</h2>
+                        <p>{props.salesPitch}</p>
                     </div>
                 )
             }
 
-            function TransportationTitle(props) {
+            function PageHeading(props) {
                 return(
-                    <div>
-                        <h2>{props.title}</h2>
-                        <p>{props.subtitle}</p>
-                    </div>
-                    <div>
-                           <TransportationTitle title= 'Welcome to React Transportation' subtitle='The best place to buy vehicles online' />
-                            <ChooseOptions title='Choose Options'/>
-                    </div>
+                   <div>
+                    <PageTitle heading= {props.heading}  
+                               salesPitch = {props.salesPitch} />
+                    
+                   </div>
                    
                 )
             }
 
+            function TransportationApp(props) {
+                return(
+                    <div>
+                        <PageHeading heading = "Welcome to React Transportation"
+                                     salesPitch = "The best place to buy vehicles online" />
+                    </div>
+                )
+            }
+
             ReactDOM.render(
-                <TransportationTitle />,
+                <TransportationApp />,
                 document.getElementById("root")
             )
 
