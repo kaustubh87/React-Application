@@ -21,6 +21,25 @@
                 )
             }
 
+            function ListItem(props) {
+                return(
+                    <table>
+                        <tr>
+                            <th>Year</th>
+                            <th>Model</th>
+                            <th>Price</th>
+                            <th>Buy</th>
+                        </tr>
+                        <tr>
+                            <td>{props.yearMade}</td>
+                            <td>{props.model}</td>
+                            <td>{props.carPrice}</td>
+                            <td><button>Buy Now</button></td>
+                        </tr>
+                    </table>
+                )
+            }
+
             function PageHeading(props) {
                 return(
                    <div>
@@ -46,6 +65,7 @@
                                      salesPitch = "The best place to buy vehicles online" />
                     
                                      <CarList header="Cars" />
+                                     <ListItem yearMade="2013" model="A" carPrice="$32000" />
                     </div>
                 )
             }
