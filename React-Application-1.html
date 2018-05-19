@@ -31,24 +31,21 @@
                 )
             }
 
-            function Table(props) {
-                return(
-                    <table>
-                        <th>
-                            <td>Year</td>
-                            <td>Model</td>
-                            <td>Price</td>
-                            <td>Buy</td>
-                        </th>
-                    </table>
-                )
-            }
+           function CarList(props){
+               return(
+                   <div>
+                       <h2>{props.header}</h2>
+                   </div>
+               )
+           }
 
             function TransportationApp(props) {
                 return(
                     <div>
                         <PageHeading heading = "Welcome to React Transportation"
                                      salesPitch = "The best place to buy vehicles online" />
+                    
+                                     <CarList header="Cars" />
                     </div>
                 )
             }
