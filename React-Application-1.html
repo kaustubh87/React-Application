@@ -2,6 +2,14 @@
 <html>
   <head>
        <meta charset="UTF-8">
+       <style type="text/css">
+           th.gray{
+            background-color: gray;
+            text-align: center;
+            color: white;
+            padding:20px;
+           }
+       </style>
        <script src="https://unpkg.com/react@15/dist/react.min.js"></script>
        <script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.24.0/babel.js"></script>
@@ -25,10 +33,10 @@
                 return(
                     <table>
                         <tr>
-                            <th>Year</th>
-                            <th>Model</th>
-                            <th>Price</th>
-                            <th>Buy</th>
+                            <th className="gray">Year</th>
+                            <th className="gray">Model</th>
+                            <th className="gray">Price</th>
+                            <th className="gray">Buy</th>
                         </tr>
                         <tr>
                             <td>{props.yearMade}</td>
@@ -58,14 +66,30 @@
                )
            }
 
+           function TruckList(props) {
+               return(
+                   <div>
+                       <h2>{props.header}</h2>
+                   </div>
+               )
+           }
+
             function TransportationApp(props) {
-                return(
+                return (
                     <div>
                         <PageHeading heading = "Welcome to React Transportation"
                                      salesPitch = "The best place to buy vehicles online" />
                     
                                      <CarList header="Cars" />
                                      <ListItem yearMade="2013" model="A" carPrice="$32000" />
+                                     <ListItem yearMade="2011" model="B" carPrice="$4400" />
+                                     <ListItem yearMade="2016" model="B" carPrice="$15500" />
+
+                                     <TruckList header="Trucks" />
+                                     <ListItem yearMade="2014" model="D" carPrice="$18000" />
+                                     <ListItem yearMade="2013" model="E" carPrice="$5200" />
+                                     
+
                     </div>
                 )
             }
