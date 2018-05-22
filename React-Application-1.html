@@ -9,6 +9,11 @@
             color: white;
             padding:20px;
            }
+
+           table {
+               width:1000px;
+               text-align: center;
+           }
        </style>
        <script src="https://unpkg.com/react@15/dist/react.min.js"></script>
        <script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
@@ -55,6 +60,17 @@
                                salesPitch = {props.salesPitch} />
                     
                    </div>   
+                )
+            }
+
+            function DropDown(props) {
+                return (
+                    <div>
+                        <span>Select Type</span>
+                        <select>
+                            <DropDownOption value ="All" />
+                        </select>
+                    </div>
                 )
             }
 
