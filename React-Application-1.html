@@ -63,6 +63,21 @@
                 )
             }
 
+            function CheckBox(props) {
+                return(
+                    <input type="checkbox" />
+                )
+            }
+
+            function ChooseOption(props) {
+                return(
+                    <div>
+                        <h2>Choose Options</h2>
+                        <p>New Only <CheckBox /></p>
+                    </div>
+                )
+            }
+
             function DropDown(props) {
                 return (
                     <div>
@@ -74,6 +89,14 @@
                             <DropDownOption value="Convertibles"/>
                         </select>
                     </div>
+                )
+            }
+
+            function DropDownOption(props){
+                return (
+                    
+                        <option>{props.value}</option>
+                   
                 )
             }
 
@@ -106,7 +129,8 @@
                     <div>
                         <PageHeading heading = "Welcome to React Transportation"
                                      salesPitch = "The best place to buy vehicles online" />
-                    
+                                     <ChooseOption />
+                                     <DropDown />
                                      <CarList header="Cars" />
                                      <ListItem yearMade="2013" model="A" carPrice="$32000" />
                                      <ListItem yearMade="2011" model="B" carPrice="$4400" />
