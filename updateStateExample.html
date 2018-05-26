@@ -16,10 +16,20 @@
 
                 constructor(props){
                     super(props)
-
                     this.state = { message: "initial message"}
                 }
+
+                render() {
+                    return <div>Message: {this.state.message}</div>
+                }
             }
+
+            ReactDOM.render(
+                <Counter />,
+                document.getElementById("root")
+            )
+
+           
 
 
         </script>
