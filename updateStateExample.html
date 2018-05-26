@@ -19,6 +19,10 @@
                     this.state = { message: "initial message"}
                 }
 
+                componentDidMount(){
+                    this.setState({ message: 'after state change'})
+                }
+
                 render() {
                     return <div>Message: {this.state.message}</div>
                 }
