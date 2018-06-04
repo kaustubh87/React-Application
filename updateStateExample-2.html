@@ -29,10 +29,18 @@
                     this.setState({ value: this.state.value + 1})
                     */
 
+        /*setState Example 2*/
+
+        this.setState((prevState, props) => {
+            return {
+                value: prevState.value + 1
+            }
+        });
+
                 }
 
                 render() {
-                    return <div>Message: {this.state.value}</div>
+                    return <div>Value: {this.state.value}</div>
                 }
             }
 
