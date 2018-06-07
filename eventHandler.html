@@ -17,42 +17,17 @@
                 constructor(props){
                     super(props)
                     this.state = { count : 0 }
+                    this.clickHandler = this.clickHandler.bind(this)
                 }
 
-                componentDidMount(){
-
-/* setState Example 1*/
-                    /*
-                    this.setState({ value: this.state.value + 1})
-                    this.setState({ value: this.state.value + 1})
-                    this.setState({ value: this.state.value + 1})
-                    this.setState({ value: this.state.value + 1})
-                    */
-
-        /*setState Example 2*/
-
-        this.setState((prevState, props) => {
-            return {
-                value: prevState.value + 1
-            }
-        });
-
-        this.setState((prevState, props) => {
-            return {
-                value: prevState.value + 1
-            }
-        });
-
-        this.setState((prevState, props) => {
-            return {
-                value: prevState.value + 1
-            }
-        });
-
+                clickHandler() {
+                    this.setState((prevState, props) => {
+                        return { count: prevState.count + 1}
+                    });
                 }
 
                 render() {
-                    return <div>Value: {this.state.value}</div>
+                    return <button onClick = {this.clickHandler}>{this.state.count} />
                 }
             }
 
