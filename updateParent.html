@@ -32,11 +32,20 @@
 
                 constructor(props){
                     super(props)
-                   
+                    this.state = {activeArray: [0,0,0,0], details}
+                    this.clickHandler = this.clickHandler.bind(this)
                 }
               
                 render() {
-                    return <button onClick = {this.clickHandler}>{this.state.count}</button>
+                    return (
+                        <div>
+                            <Button name="One" />
+                            <Button name="Two" />
+                            <Button name="Three" />
+                            <Button name="Four" />
+                            <Details />
+                        </div>
+                    )
                 }
             }
 
